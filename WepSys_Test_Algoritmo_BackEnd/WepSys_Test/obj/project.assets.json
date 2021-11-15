@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Elian Cruz\\source\\repos\\wepsys\\wepsys_tests_eliancruz\\WepSys_Test\\WepSys_Test\\WepSys_Test.csproj",
+      "projectUniqueName": "C:\\Users\\Elian Cruz\\source\\repos\\wepsys\\wepsys_tests_eliancruz\\WepSys_Test_Algoritmo_BackEnd\\WepSys_Test\\WepSys_Test.csproj",
       "projectName": "WepSys_Test",
-      "projectPath": "C:\\Users\\Elian Cruz\\source\\repos\\wepsys\\wepsys_tests_eliancruz\\WepSys_Test\\WepSys_Test\\WepSys_Test.csproj",
+      "projectPath": "C:\\Users\\Elian Cruz\\source\\repos\\wepsys\\wepsys_tests_eliancruz\\WepSys_Test_Algoritmo_BackEnd\\WepSys_Test\\WepSys_Test.csproj",
       "packagesPath": "C:\\Users\\Elian Cruz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Elian Cruz\\source\\repos\\wepsys\\wepsys_tests_eliancruz\\WepSys_Test\\WepSys_Test\\obj\\",
+      "outputPath": "C:\\Users\\Elian Cruz\\source\\repos\\wepsys\\wepsys_tests_eliancruz\\WepSys_Test_Algoritmo_BackEnd\\WepSys_Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
