@@ -14,7 +14,7 @@ export class AppComponent {
   public userForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
-    email: ['', Validators.required, Validators.email],
+    email: ['', Validators.required],
     phone: ['', Validators.required],
   });
 
@@ -23,7 +23,7 @@ export class AppComponent {
   onSubmit() {
     this.isRepeatedEmail = false;
     this.isSubmited = true;
-    console.log(this.userForm.value, this.userForm.valid);
+
     if (this.userForm.valid) {
       var idx = this.getIndexOfUser(this.userForm.value.email);
       console.log(idx);
@@ -49,6 +49,14 @@ export class AppComponent {
   }
 
   private getIndexOfUser(email: string): number {
-    return this.listOfUsers.indexOf((u: any) => u.email === email);
+    var idx = -1;
+    for (let i = 0; i < this.listOfUsers.length; i++) {
+      const ele = this.listOfUsers[i];
+      if (ele.email === email) {
+        idx = i;
+        break;
+      }
+    }
+    return idx;
   }
 }

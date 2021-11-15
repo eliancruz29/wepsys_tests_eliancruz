@@ -28,7 +28,7 @@
       <span class="badge_messsage" *ngIf="isRepeatedEmail">
         El correo electronico es repetido
       </span>
-      <span class="badge_messsage" *ngIf="userForm.valid && isSubmited">
+      <span class="badge_messsage" *ngIf="!userForm.valid && isSubmited">
         El formulario no es valido
       </span>
       <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
@@ -40,33 +40,38 @@
         <input id="last-name" type="text" formControlName="lastName">
 
         <label for="email">Email: </label>
-        <input id="email" type="email" formControlName="email">
+        <input id="email" type="email" formControlName="email" [email]="true">
 
         <label for="phone">Phone: </label>
         <input id="phone" type="text" formControlName="phone">
-
+        <p>Form Status: {{ userForm.status }}</p>
         <button type="submit">Submit</button>
       </form>
     </div>
     <div class="result_container">
       <table>
-        <tr>
-          <th>#</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Email</th>
-          <th>Telefono</th>
-          <th>Action</th>
-        </tr>
-        <tr *ngFor="let user of listOfUsers; index as i">
-          <td>{{user.firstName}}</td>
-          <td>{{user.lastName}}</td>
-          <td>{{user.email}}</td>
-          <td>{{user.phone}}</td>
-          <td>
-            <button type="button" (click)="removeUser(user)">Submit</button>
-          </td>
-        </tr>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of listOfUsers; index as i">
+            <td>{{i}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>
+              <button type="button" (click)="removeUser(user)">Remove</button>
+            </td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
